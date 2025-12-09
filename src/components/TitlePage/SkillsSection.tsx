@@ -1,5 +1,3 @@
-"use client";
-import Image from "next/image";
 import TooltipIcon from "../TooltipIcon/TooltipIcon";
 
 export default function SkillsSection() {

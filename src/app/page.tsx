@@ -1,5 +1,3 @@
-"use client";
-import { Tooltip } from "react-tooltip";
 import IntroductionSection from "../components/TitlePage/IntroductionSection";
 import SkillsSection from "../components/TitlePage/SkillsSection";
 
@@ -131,11 +129,8 @@ export default function Home() {
           </div>
         </section>
         <section>
-          <h1 data-tooltip-id="my-tooltip">Cntact info</h1>
+          <h1>Cntact info</h1>
         </section>
-        <Tooltip id="my-tooltip" clickable>
-          Tool
-        </Tooltip>
       </main>
     </div>
   );

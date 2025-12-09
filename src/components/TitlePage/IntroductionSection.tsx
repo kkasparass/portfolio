@@ -43,7 +43,7 @@ export default function IntroductionSection() {
           <p>Full-Stack developer</p>
         </div>
         <p>
-          Hi all! I'm a seasoned <b>Full-stack engineer</b> focused on{" "}
+          Hi all! I&apos;m a seasoned <b>Full-stack engineer</b> focused on{" "}
           <b>front-end development</b> and building quality web apps.
         </p>
       </div>
