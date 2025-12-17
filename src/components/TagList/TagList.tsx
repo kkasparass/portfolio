@@ -1,10 +1,3 @@
-import Image from "next/image";
-import {
-  type AccordionItemProps,
-  AccordionItem as Item,
-} from "@szhsin/react-accordion";
-import { ChevronDown } from "lucide-react";
-
 const TagList = ({ tags = [] }: { tags?: string[] }) => (
   <div className="flex gap-2 flex-wrap">
     {tags.map((tag, index) => (
