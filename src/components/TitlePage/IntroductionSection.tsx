@@ -1,4 +1,5 @@
 "use client";
+import { FileUser, Mail, MapPin } from "lucide-react";
 import Image from "next/image";
 
 export default function IntroductionSection() {
@@ -11,10 +12,10 @@ export default function IntroductionSection() {
           width={200}
           height={200}
         />
-        <div className="flex gap-1">
+        <div className="flex gap-2">
           <a target="_blank" href="https://github.com/kkasparass">
             <Image
-              className="dark:invert"
+              className="dark:invert opacity-75 hover:opacity-100"
               src="/github-logo.svg"
               alt="Github profile link image"
               width={20}
@@ -27,7 +28,7 @@ export default function IntroductionSection() {
             href="https://www.linkedin.com/in/kasparas-morkunas-17b8851a9/"
           >
             <Image
-              className="dark:invert"
+              className="dark:invert opacity-75 hover:opacity-100"
               src="/linkedin-logo.svg"
               alt="Linkedin profile link image"
               width={20}
@@ -35,12 +36,22 @@ export default function IntroductionSection() {
               priority
             />
           </a>
+          <a href="mailto:kasparas.morkunas@proton.me">
+            <Mail className="opacity-75 hover:opacity-100" size={20} />
+          </a>
+          <a target="_blank" href="/cv.pdf">
+            <FileUser className="opacity-75 hover:opacity-100" size={20} />
+          </a>
         </div>
       </div>
       <div className="flex flex-col gap-4">
         <div>
           <h1 className="text-3xl font-semibold">Kasparas Morkunas</h1>
           <p>Full-Stack developer</p>
+          <div className="flex gap-1 align-center">
+            <MapPin />
+            <p>Valencia, Spain</p>
+          </div>
         </div>
         <p>
           Hi all! I&apos;m a seasoned <b>Full-stack engineer</b> focused on{" "}

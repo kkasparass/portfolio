@@ -3,9 +3,8 @@ import TooltipIcon from "../TooltipIcon/TooltipIcon";
 export default function SkillsSection() {
   return (
     <section className="flex flex-col gap-8">
-      <h2 className="text-2xl font-semibold">Skills</h2>
       <div>
-        <h3 className="text-xl font-semibold">Core Skillset</h3>
+        <h2 className="text-2xl font-semibold">Core Skillset</h2>
         <p>
           The backbone of my career with 5+ years of experience in each skill
         </p>
@@ -47,7 +46,7 @@ export default function SkillsSection() {
         </div>
       </div>
       <div>
-        <h3 className="text-xl font-semibold">Professional skills</h3>
+        <h2 className="text-2xl font-semibold">Professional skills</h2>
         <p>
           Skills I have professionally utilised to build personal and work
           related projects

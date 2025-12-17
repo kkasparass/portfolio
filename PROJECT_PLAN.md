@@ -7,14 +7,15 @@ TLDR This file's a TODO list for the project.
 - Define sections for the portfolio info +
 - Fill out introduction section
   - Draft +
-  - Finish contact info icons
+  - Finish contact info icons +
   - Finalise Layout
 - Fill out skills section
   - Draft +
-  - Prepare skill icons and links
+  - Prepare skill icons and links+
   - Finalise layout
 - Carrer section
-  - Fill out info
+  - Fill out info +
+  - Collapsable experiences+
   - Timeline component
   - https://web.archive.org/web/20220528101708/https://www.halo.rent/
   - https://play.google.com/store/apps/details?id=com.ufirstgroup.FavurApp
