@@ -8,12 +8,14 @@ const TooltipIcon = ({
   link,
   id,
   invertDarkMode = true,
+  size = 50,
 }: {
   src: string;
   text: string;
   link: string;
   id: string;
   invertDarkMode?: boolean;
+  size?: number;
 }) => {
   return (
     <>
@@ -22,8 +24,8 @@ const TooltipIcon = ({
           className={`${invertDarkMode ? "dark:invert" : ""}`}
           src={src}
           alt={`${text} Icon`}
-          width={50}
-          height={50}
+          width={size}
+          height={size}
           priority
         />
       </a>

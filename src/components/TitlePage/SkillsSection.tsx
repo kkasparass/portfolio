@@ -8,7 +8,7 @@ export default function SkillsSection() {
         <p>
           The backbone of my career with 5+ years of experience in each skill
         </p>
-        <div className="flex gap-4">
+        <div className="flex gap-4 mt-2">
           <TooltipIcon
             src="/react-logo.svg"
             link="https://react.dev/"
@@ -51,12 +51,13 @@ export default function SkillsSection() {
           Skills I have professionally utilised to build personal and work
           related projects
         </p>
-        <div className="flex gap-4 items-center">
+        <div className="flex gap-4 items-center mt-2 flex-wrap">
           <TooltipIcon
             src="/psql-logo.svg"
             link="https://www.postgresql.org/"
             id="PostgreSQL-Icon"
             text="PostgreSQL"
+            size={35}
             invertDarkMode={false}
           />
           <TooltipIcon
@@ -64,6 +65,7 @@ export default function SkillsSection() {
             link="https://elixir-lang.org/"
             id="Elixir-Icon"
             text="Elixir"
+            size={35}
             invertDarkMode={false}
           />
           <TooltipIcon
@@ -71,6 +73,7 @@ export default function SkillsSection() {
             link="https://reactnative.dev/"
             id="React-native-Icon"
             text="React Native"
+            size={35}
             invertDarkMode={false}
           />
           <TooltipIcon
@@ -78,12 +81,14 @@ export default function SkillsSection() {
             link="https://nextjs.org/"
             id="NextJS-Icon"
             text="NextJS"
+            size={35}
           />
           <TooltipIcon
             src="/vue-logo.svg"
             link="https://vuejs.org/"
             id="Vue-Icon"
             text="VueJS"
+            size={35}
             invertDarkMode={false}
           />
           <TooltipIcon
@@ -91,6 +96,7 @@ export default function SkillsSection() {
             link="https://ionicframework.com/"
             id="Ionic-Icon"
             text="Ionic Fromework"
+            size={35}
             invertDarkMode={false}
           />
           <TooltipIcon
@@ -98,6 +104,7 @@ export default function SkillsSection() {
             link="https://capacitorjs.com/"
             id="Capacitor-Icon"
             text="CapacitorJS"
+            size={35}
             invertDarkMode={false}
           />
           <TooltipIcon
@@ -105,6 +112,7 @@ export default function SkillsSection() {
             link="https://www.php.net/"
             id="PHP-Icon"
             text="PHP"
+            size={35}
             invertDarkMode={false}
           />
           <TooltipIcon
@@ -112,6 +120,7 @@ export default function SkillsSection() {
             link="https://sendgrid.com/en-us"
             id="Sendgrid-Icon"
             text="Sendgrid"
+            size={35}
             invertDarkMode={false}
           />
           <TooltipIcon
@@ -119,6 +128,7 @@ export default function SkillsSection() {
             link="https://getbootstrap.com/"
             id="Bootstrap-Icon"
             text="Bootstrap"
+            size={35}
             invertDarkMode={false}
           />
           <TooltipIcon
@@ -126,6 +136,7 @@ export default function SkillsSection() {
             link="https://tailwindcss.com/"
             id="Tailwind-Icon"
             text="TailwindCSS"
+            size={35}
             invertDarkMode={false}
           />
           <TooltipIcon
@@ -133,12 +144,14 @@ export default function SkillsSection() {
             link="https://mui.com/material-ui/"
             id="Mui-Icon"
             text="MaterialUI"
+            size={35}
           />
           <TooltipIcon
             src="/tanstack-logo.svg"
             link="https://tanstack.com/query/docs"
             id="Tanstack-Icon"
             text="Tanstack Query"
+            size={35}
           />
         </div>
       </div>

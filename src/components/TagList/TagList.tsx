@@ -3,7 +3,7 @@ const TagList = ({ tags = [] }: { tags?: string[] }) => (
     {tags.map((tag, index) => (
       <p
         key={index}
-        className="bg-sky-500/60 px-6 py-1 whitespace-nowrap rounded-2xl"
+        className="text-xs sm:text-base bg-sky-500/60 px-4 sm:px-6 py-1 whitespace-nowrap rounded-2xl"
       >
         {tag}
       </p>

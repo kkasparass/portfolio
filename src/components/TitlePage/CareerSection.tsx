@@ -15,7 +15,7 @@ export default function CareerSection() {
   });
 
   return (
-    <section className="flex flex-col gap-8">
+    <section className="flex flex-col gap-2">
       <h2 className="text-2xl font-semibold">Career path</h2>
 
       <ControlledAccordion providerValue={providerValue}>
