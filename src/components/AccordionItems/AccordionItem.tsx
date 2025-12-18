@@ -23,7 +23,7 @@ const AccordionItem = ({
   isOpen: boolean;
   hideSkillsWhenOpen?: boolean;
 } & AccordionItemProps) => (
-  <div className="border-b pb-2">
+  <div className="border-b pb-4">
     <Item
       {...rest}
       itemKey={headerText}
@@ -56,7 +56,7 @@ const AccordionItem = ({
       {children}
     </Item>
     {skills.length > 0 && !(hideSkillsWhenOpen && isOpen) && (
-      <div className="px-4">
+      <div className="flex flex-col gap-2 px-4">
         <strong>Key skills:</strong>
         <TagList tags={skills} />
       </div>

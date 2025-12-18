@@ -29,7 +29,12 @@ const TooltipIcon = ({
           priority
         />
       </a>
-      <Tooltip id={id} clickable>
+      <Tooltip
+        place="top"
+        className="dark:bg-foreground! dark:text-background! z-1"
+        id={id}
+        clickable
+      >
         {text}
       </Tooltip>
     </>

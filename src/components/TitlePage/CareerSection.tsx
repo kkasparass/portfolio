@@ -31,11 +31,12 @@ export default function CareerSection() {
             "React",
             "Typescript",
             "GraphQL",
+            "RestAPI",
             "Apollo Client",
+            "Tanstack Query",
             "Elixir",
+            "PHP",
             "PostgreSQL",
-            "Ionic",
-            "Capacitor",
             "MateiralUI",
           ]}
         >

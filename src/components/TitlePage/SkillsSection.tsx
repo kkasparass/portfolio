@@ -8,7 +8,7 @@ export default function SkillsSection() {
         <p>
           The backbone of my career with 5+ years of experience in each skill
         </p>
-        <div className="flex gap-4 mt-2">
+        <div className="flex gap-4 mt-4">
           <TooltipIcon
             src="/react-logo.svg"
             link="https://react.dev/"
@@ -27,7 +27,6 @@ export default function SkillsSection() {
             link="https://developer.mozilla.org/en-US/docs/Web/HTML"
             id="HTML-Icon"
             text="HTML"
-            invertDarkMode={false}
           />
           <TooltipIcon
             src="/css-logo.svg"
@@ -51,7 +50,7 @@ export default function SkillsSection() {
           Skills I have professionally utilised to build personal and work
           related projects
         </p>
-        <div className="flex gap-4 items-center mt-2 flex-wrap">
+        <div className="flex gap-4 items-center mt-4 flex-wrap">
           <TooltipIcon
             src="/psql-logo.svg"
             link="https://www.postgresql.org/"

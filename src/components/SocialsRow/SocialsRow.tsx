@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const SocialsRow = ({ className = "" }: { className?: string }) => {
   return (
-    <div className={`flex gap-2 ${className}`}>
+    <div className={`flex gap-2 items-center ${className}`}>
       <a target="_blank" href="https://github.com/kkasparass">
         <Image
           className="dark:invert opacity-75 hover:opacity-100"
