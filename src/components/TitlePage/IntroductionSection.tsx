@@ -1,5 +1,5 @@
 "use client";
-import { FileUser, Mail, MapPin } from "lucide-react";
+import { MapPin } from "lucide-react";
 import Image from "next/image";
 import SocialsRow from "../SocialsRow/SocialsRow";
 
