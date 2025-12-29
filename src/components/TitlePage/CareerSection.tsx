@@ -51,7 +51,7 @@ export default function CareerSection() {
                 target="_blank"
                 href="https://play.google.com/store/apps/details?id=com.ufirstgroup.FavurApp"
               >
-                <h4 className="text-l font-semibold underline hover:no-underline">
+                <h4 className="text-xl font-semibold underline hover:no-underline">
                   Favur
                 </h4>
               </a>
@@ -93,7 +93,7 @@ export default function CareerSection() {
 
             <div className="flex flex-col gap-2">
               <a target="_blank" href="https://www.sabag.ch/de/innenausbau">
-                <h4 className="text-l font-semibold underline hover:no-underline">
+                <h4 className="text-xl font-semibold underline hover:no-underline">
                   SABAG
                 </h4>
               </a>

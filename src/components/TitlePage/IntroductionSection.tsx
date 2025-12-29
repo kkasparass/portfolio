@@ -11,10 +11,10 @@ export default function IntroductionSection() {
           src="/portrait-image.png"
           alt={"Kasparas Morkunas portrait"}
           className="max-w-fit"
-          width={115}
-          height={115}
+          width={100}
+          height={100}
         />
-        <SocialsRow />
+        <SocialsRow compact />
       </div>
       <div className="flex flex-col gap-2">
         <div className="flex gap-4 items-center mb-2">

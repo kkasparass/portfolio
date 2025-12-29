@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Kasparas Site",
   description: "A portfolio and playground website for Kasparas Morkunas :)",
+  icons: "/favicon-1.png",
 };
 
 export default function RootLayout({

@@ -48,7 +48,7 @@ export default function SkillsSection() {
         <h2 className="text-2xl font-semibold">Professional skills</h2>
         <p>
           Skills I have professionally utilised to build personal and work
-          related projects
+          projects
         </p>
         <div className="flex gap-4 items-center mt-4 flex-wrap">
           <TooltipIcon
