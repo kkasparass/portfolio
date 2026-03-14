@@ -99,7 +99,7 @@ export default function CareerSection() {
               </a>
               <p>
                 SABAG is a Swiss building material giant and UFirst has built
-                and maintains their building materials and kitchen supply barnch
+                and maintains their building materials and kitchen supply branch
                 catalog and store website.
               </p>
               <p>
@@ -140,7 +140,7 @@ export default function CareerSection() {
           <div className="flex flex-col gap-2">
             <p>
               My first professional experience was with Halo.rent which was a
-              start-up web platform to ease the process of letting a residance
+              start-up web platform to ease the process of letting a residence
               in the UK. I was a strictly front end developer there working with
               React, Typescript, graphQL.
             </p>
@@ -158,7 +158,7 @@ export default function CareerSection() {
             </p>
             <p>
               I also built and maintained the company landing page using Webflow
-              (Sadly not much publicly remains of the proyect as it was bought
+              (Sadly not much publicly remains of the project as it was bought
               and absorbed by GoodLord)
             </p>
             <p>
