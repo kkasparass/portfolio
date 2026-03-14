@@ -140,7 +140,7 @@ export default function CareerSection() {
           <div className="flex flex-col gap-2">
             <p>
               My first professional experience was with Halo.rent which was a
-              start-up web platform to ease the peocess of letting a residance
+              start-up web platform to ease the process of letting a residance
               in the UK. I was a strictly front end developer there working with
               React, Typescript, graphQL.
             </p>
