@@ -19,4 +19,26 @@ describe("TagList", () => {
     const { container } = render(<TagList />);
     expect(container.firstChild?.childNodes).toHaveLength(0);
   });
+
+  it("renders tag label when passed as an object", () => {
+    render(<TagList tags={[{ label: "Elixir" }]} />);
+    expect(screen.getByText("Elixir")).toBeInTheDocument();
+  });
+
+  it("wraps tag in a link when href is provided", () => {
+    render(<TagList tags={[{ label: "Elixir", href: "https://elixir-lang.org/" }]} />);
+    const link = screen.getByRole("link");
+    expect(link).toHaveAttribute("href", "https://elixir-lang.org/");
+    expect(link).toHaveAttribute("target", "_blank");
+  });
+
+  it("does not render a link when href is omitted", () => {
+    render(<TagList tags={[{ label: "Elixir" }]} />);
+    expect(screen.queryByRole("link")).not.toBeInTheDocument();
+  });
+
+  it("renders a tooltip element when tooltip is provided", () => {
+    render(<TagList tags={[{ label: "Elixir", tooltip: "UFirstGroup · Intermediate · 2 yrs" }]} />);
+    expect(screen.getByRole("tooltip")).toHaveTextContent("UFirstGroup · Intermediate · 2 yrs");
+  });
 });

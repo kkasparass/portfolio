@@ -37,13 +37,14 @@ export default function CareerSection() {
             "Elixir",
             "PHP",
             "PostgreSQL",
-            "MateiralUI",
+            "MaterialUI",
           ]}
         >
           <div className="flex flex-col gap-4">
             <p>
-              With UFirst I started working as a Full-Stack developer and mainly
-              contributed to two big projects:
+              At UFirst I worked as a full-stack developer across two client
+              products, owning features end-to-end from frontend through backend
+              and database.
             </p>
 
             <div className="flex flex-col gap-2">
@@ -56,24 +57,22 @@ export default function CareerSection() {
                 </h4>
               </a>
               <p>
-                Favur is a schedule management app which has both a web app and
-                a mobile app built on React and Ionic/Capacitor for any native
-                functionality.
+                Favur is a workforce scheduling platform with a cross-platform
+                web and mobile app (React + Ionic/Capacitor). It has 10,000+
+                downloads on the Google Play Store.
               </p>
               <p>
-                The Front-End tech stack was the typical React,
-                Typescript,GraphQL & Apollo Client, and MaterialUI for styling.
-                The Back-End consisted of Elixir, PostgreSQL, Ecto.
+                I contributed to complex interactive screens — team calendars,
+                shift management, approval workflows — and worked across the
+                full stack including Elixir backend and PostgreSQL data
+                modelling.
               </p>
               <p>
-                As the app has many communication workflows I contributed to
-                many huge interactive functionalities like a calendar,
-                displaying all shifts and absences of the user&#x2019;s teams
-              </p>
-              <p>
-                I also led a whole app scale redesign/FE restructuring
-                initiative to revamp the project&#x2019;s component base and set
-                up testing for the project.
+                I led a 4&#x2013;6 month app-wide frontend redesign with a team
+                of 4 developers, introducing atomic design principles with
+                Storybook as the source of truth and growing test coverage from
+                ~30% to 80%. I also led a security permissions overhaul
+                following a CNLABS cybersecurity audit.
               </p>
               <strong>Key skills:</strong>
               <TagList
@@ -86,7 +85,7 @@ export default function CareerSection() {
                   "PostgreSQL",
                   "Ionic",
                   "Capacitor",
-                  "MateiralUI",
+                  "MaterialUI",
                 ]}
               />
             </div>
@@ -98,15 +97,11 @@ export default function CareerSection() {
                 </h4>
               </a>
               <p>
-                SABAG is a Swiss building material giant and UFirst has built
-                and maintains their building materials and kitchen supply branch
-                catalog and store website.
-              </p>
-              <p>
-                The Front-End tech stack consisted of React, Typescript, a mix
-                of GraphQL & Apollo Client and RestAPI & Tanstack Query for
-                APIs. The Back-End consisted of PHP, PostgreSQL, and a Commerce
-                Platform called Spryker based on PHP.
+                SABAG is a Swiss building materials giant. UFirst built and
+                maintains their online catalogue and store. I worked across the
+                React frontend and PHP/Spryker backend, shipping new product
+                storefronts with advanced category filters, product variants,
+                and dynamic pricing logic.
               </p>
               <strong>Key skills:</strong>
               <TagList
@@ -139,32 +134,23 @@ export default function CareerSection() {
         >
           <div className="flex flex-col gap-2">
             <p>
-              My first professional experience was with Halo.rent which was a
-              start-up web platform to ease the process of letting a residence
-              in the UK. I was a strictly front end developer there working with
-              React, Typescript, graphQL.
+              Halo.rent was a UK property-tech startup that simplified the
+              residential letting process — later acquired by GoodLord. I was
+              a frontend developer there for three years, building and
+              maintaining the core tenant portal as it grew.
             </p>
             <p>
-              The application mostly consisted of a portal to upload information
-              about rental units and managing tenant applications and
-              communications along each step.
+              The platform was a complex multi-step SPA handling everything
+              from tenant onboarding to active tenancy management. The most
+              involved piece I built was the tenancy agreement contract form:
+              data aggregated from across the app, dynamic lease cost
+              calculations, flexible payment schedules, and custom validation
+              logic throughout.
             </p>
             <p>
-              The main complexity of it was to handle all of the different
-              states that the application could be in, handle the communication
-              between the applicant and the manager, and to handle many huge
-              forms to fill out the details of the application and the rental
-              unit.
-            </p>
-            <p>
-              I also built and maintained the company landing page using Webflow
-              (Sadly not much publicly remains of the project as it was bought
-              and absorbed by GoodLord)
-            </p>
-            <p>
-              And also by the tail end of my time at the company I got to work
-              on a mini project building a chat app where I got to learn React
-              Native and some mobile development.
+              I also owned the company landing page in Webflow and, in my
+              final months, contributed to a React Native internal messaging
+              app — my first taste of mobile development.
             </p>
           </div>
         </AccordionItem>
@@ -188,10 +174,9 @@ export default function CareerSection() {
         >
           <div className="flex flex-col gap-2">
             <p>
-              Not much has survived from these dark times But some more
-              memorable projects have been a simple hack and slash game written
-              purely with C++, A chess board 3D moddled with three.js, snake
-              coded with C.
+              BSc Computer Science. Highlights include a hack-and-slash game in
+              pure C++, a 3D chess board with three.js/WebGL, and a snake clone
+              in C. Also covered Java, UX design, and a solid chunk of maths.
             </p>
           </div>
         </AccordionItem>

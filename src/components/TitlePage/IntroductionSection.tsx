@@ -27,16 +27,19 @@ export default function IntroductionSection() {
           />
           <div>
             <h1 className="text-3xl font-semibold">Kasparas Morkunas</h1>
-            <p>Full-Stack developer</p>
-            <div className="flex gap-1 align-center">
-              <MapPin />
-              <p>Valencia, Spain</p>
+            <span className="inline-block mt-1 text-sm font-medium bg-sky-100 text-sky-700 dark:bg-sky-900/40 dark:text-sky-300 px-3 py-0.5 rounded-full">
+              Full-Stack Developer
+            </span>
+            <div className="flex gap-1 items-center mt-1">
+              <MapPin size={16} />
+              <p className="text-sm">Valencia, Spain</p>
             </div>
           </div>
         </div>
         <p>
-          Hi all! I&apos;m a seasoned <b>Full-stack developer</b> focused on{" "}
-          <b>front-end development</b> and building quality web apps.
+          Hey, I&apos;m Kaspa — a full-stack developer with 5+ years building
+          web and mobile apps. I care about clean frontends, solid test
+          coverage, and shipping things that actually work.
         </p>
         <SocialsRow className="sm:hidden" />
       </div>

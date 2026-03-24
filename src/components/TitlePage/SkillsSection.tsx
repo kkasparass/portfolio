@@ -1,13 +1,12 @@
+import TagList from "../TagList/TagList";
 import TooltipIcon from "../TooltipIcon/TooltipIcon";
 
 export default function SkillsSection() {
   return (
     <section className="flex flex-col gap-8">
       <div>
-        <h2 className="text-2xl font-semibold">Core Skillset</h2>
-        <p>
-          The backbone of my career with 5+ years of experience in each skill
-        </p>
+        <h2 className="text-2xl font-semibold">What I work with</h2>
+        <p>The backbone of my career — 5+ years with each of these</p>
         <div className="flex gap-4 mt-4">
           <TooltipIcon
             src="/react-logo.svg"
@@ -42,115 +41,64 @@ export default function SkillsSection() {
             text="GraphQL"
             invertDarkMode={false}
           />
+          <TooltipIcon
+            src="/apollo-logo.svg"
+            link="https://www.apollographql.com/docs/react/"
+            id="Apollo-Icon"
+            text="Apollo Client"
+          />
         </div>
       </div>
-      <div>
-        <h2 className="text-2xl font-semibold">Professional skills</h2>
-        <p>
-          Skills I have professionally utilised to build personal and work
-          projects
-        </p>
-        <div className="flex gap-4 items-center mt-4 flex-wrap">
-          <TooltipIcon
-            src="/psql-logo.svg"
-            link="https://www.postgresql.org/"
-            id="PostgreSQL-Icon"
-            text="PostgreSQL"
-            size={35}
-            invertDarkMode={false}
+
+      <div className="flex flex-col gap-6">
+        <h2 className="text-2xl font-semibold">More in the toolkit</h2>
+
+        <div className="flex flex-col gap-2">
+          <h3 className="text-sm font-semibold uppercase tracking-wide text-foreground/50">Mobile</h3>
+          <TagList
+            tags={[
+              { label: "React Native", href: "https://reactnative.dev/", tooltip: "Halo.Rent & Day Planner · Proficient · 3+ yrs" },
+              { label: "Ionic", href: "https://ionicframework.com/", tooltip: "UFirstGroup (Favur) · Proficient · 2 yrs" },
+              { label: "Capacitor", href: "https://capacitorjs.com/", tooltip: "UFirstGroup (Favur) · Proficient · 2 yrs" },
+            ]}
           />
-          <TooltipIcon
-            src="/elixir-logo.svg"
-            link="https://elixir-lang.org/"
-            id="Elixir-Icon"
-            text="Elixir"
-            size={35}
-            invertDarkMode={false}
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <h3 className="text-sm font-semibold uppercase tracking-wide text-foreground/50">Backend</h3>
+          <TagList
+            tags={[
+              { label: "Elixir", href: "https://elixir-lang.org/", tooltip: "UFirstGroup (Favur) · Intermediate · 2 yrs" },
+              { label: "PHP", href: "https://www.php.net/", tooltip: "UFirstGroup (SABAG) · Intermediate · <1 yr" },
+              { label: "PostgreSQL", href: "https://www.postgresql.org/", tooltip: "UFirstGroup (Favur & SABAG) · Intermediate · 2+ yrs" },
+            ]}
           />
-          <TooltipIcon
-            src="/react-logo.svg"
-            link="https://reactnative.dev/"
-            id="React-native-Icon"
-            text="React Native"
-            size={35}
-            invertDarkMode={false}
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <h3 className="text-sm font-semibold uppercase tracking-wide text-foreground/50">UI libraries</h3>
+          <TagList
+            tags={[
+              { label: "MaterialUI", href: "https://mui.com/", tooltip: "UFirstGroup (Favur) · Proficient · 2 yrs" },
+              { label: "TailwindCSS", href: "https://tailwindcss.com/", tooltip: "Personal projects · Proficient" },
+              { label: "Bootstrap", href: "https://getbootstrap.com/", tooltip: "Halo.Rent · Proficient · 3+ yrs" },
+            ]}
           />
-          <TooltipIcon
-            src="/nextjs-logo.svg"
-            link="https://nextjs.org/"
-            id="NextJS-Icon"
-            text="NextJS"
-            size={35}
-          />
-          <TooltipIcon
-            src="/vue-logo.svg"
-            link="https://vuejs.org/"
-            id="Vue-Icon"
-            text="VueJS"
-            size={35}
-            invertDarkMode={false}
-          />
-          <TooltipIcon
-            src="/ionic-logo.svg"
-            link="https://ionicframework.com/"
-            id="Ionic-Icon"
-            text="Ionic Fromework"
-            size={35}
-            invertDarkMode={false}
-          />
-          <TooltipIcon
-            src="/capacitor-logo.svg"
-            link="https://capacitorjs.com/"
-            id="Capacitor-Icon"
-            text="CapacitorJS"
-            size={35}
-            invertDarkMode={false}
-          />
-          <TooltipIcon
-            src="/php-logo.svg"
-            link="https://www.php.net/"
-            id="PHP-Icon"
-            text="PHP"
-            size={35}
-            invertDarkMode={false}
-          />
-          <TooltipIcon
-            src="/sendgrid-logo.svg"
-            link="https://sendgrid.com/en-us"
-            id="Sendgrid-Icon"
-            text="Sendgrid"
-            size={35}
-            invertDarkMode={false}
-          />
-          <TooltipIcon
-            src="/bootstrap-logo.svg"
-            link="https://getbootstrap.com/"
-            id="Bootstrap-Icon"
-            text="Bootstrap"
-            size={35}
-            invertDarkMode={false}
-          />
-          <TooltipIcon
-            src="/tailwind-logo.svg"
-            link="https://tailwindcss.com/"
-            id="Tailwind-Icon"
-            text="TailwindCSS"
-            size={35}
-            invertDarkMode={false}
-          />
-          <TooltipIcon
-            src="/mui-logo.svg"
-            link="https://mui.com/material-ui/"
-            id="Mui-Icon"
-            text="MaterialUI"
-            size={35}
-          />
-          <TooltipIcon
-            src="/tanstack-logo.svg"
-            link="https://tanstack.com/query/docs"
-            id="Tanstack-Icon"
-            text="Tanstack Query"
-            size={35}
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <h3 className="text-sm font-semibold uppercase tracking-wide text-foreground/50">Testing & tooling</h3>
+          <TagList
+            tags={[
+              { label: "Jest", href: "https://jestjs.io/", tooltip: "Favur & SABAG · Proficient · 3+ yrs" },
+              { label: "React Testing Library", href: "https://testing-library.com/docs/react-testing-library/intro/", tooltip: "Favur & SABAG · Proficient · 3+ yrs" },
+              { label: "Cypress", href: "https://www.cypress.io/", tooltip: "Favur, SABAG & Halo.Rent · Intermediate · 3+ yrs" },
+              { label: "Storybook", href: "https://storybook.js.org/", tooltip: "UFirstGroup & Halo.Rent · Proficient · 5+ yrs" },
+              { label: "Figma", href: "https://www.figma.com/", tooltip: "All professional roles · Proficient · 5+ yrs" },
+              { label: "DataDog", href: "https://www.datadoghq.com/", tooltip: "UFirstGroup · Proficient · 2 yrs" },
+              { label: "GitLab CI/CD", href: "https://docs.gitlab.com/ee/ci/", tooltip: "All professional roles · Proficient · 5+ yrs" },
+              { label: "Git", href: "https://git-scm.com/", tooltip: "All roles & projects · Expert · 5+ yrs" },
+            ]}
           />
         </div>
       </div>

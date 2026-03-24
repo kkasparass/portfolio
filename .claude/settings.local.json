@@ -3,7 +3,9 @@
     "allow": [
       "Bash(find /c/coding/portfolio/src -type f -name *.ts -o -name *.tsx -o -name *.js -o -name *.jsx)",
       "Bash(find /c/coding/portfolio -not -path */node_modules* -not -path */.next* -not -path */.git* -type d)",
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:www.vectorlogo.zone)"
     ]
   }
 }
