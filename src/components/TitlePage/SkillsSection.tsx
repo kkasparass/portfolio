@@ -57,9 +57,9 @@ export default function SkillsSection() {
           <h3 className="text-sm font-semibold uppercase tracking-wide text-foreground/50">Mobile</h3>
           <TagList
             tags={[
-              { label: "React Native", href: "https://reactnative.dev/", tooltip: "Halo.Rent & Day Planner · Proficient · 3+ yrs" },
-              { label: "Ionic", href: "https://ionicframework.com/", tooltip: "UFirstGroup (Favur) · Proficient · 2 yrs" },
-              { label: "Capacitor", href: "https://capacitorjs.com/", tooltip: "UFirstGroup (Favur) · Proficient · 2 yrs" },
+              { label: "React Native", href: "https://reactnative.dev/", tooltip: "Used in: Halo.Rent & Day Planner" },
+              { label: "Ionic", href: "https://ionicframework.com/", tooltip: "Used in: Favur" },
+              { label: "Capacitor", href: "https://capacitorjs.com/", tooltip: "Used in: Favur" },
             ]}
           />
         </div>
@@ -68,9 +68,9 @@ export default function SkillsSection() {
           <h3 className="text-sm font-semibold uppercase tracking-wide text-foreground/50">Backend</h3>
           <TagList
             tags={[
-              { label: "Elixir", href: "https://elixir-lang.org/", tooltip: "UFirstGroup (Favur) · Intermediate · 2 yrs" },
-              { label: "PHP", href: "https://www.php.net/", tooltip: "UFirstGroup (SABAG) · Intermediate · <1 yr" },
-              { label: "PostgreSQL", href: "https://www.postgresql.org/", tooltip: "UFirstGroup (Favur & SABAG) · Intermediate · 2+ yrs" },
+              { label: "Elixir", href: "https://elixir-lang.org/", tooltip: "Used in: Favur" },
+              { label: "PHP", href: "https://www.php.net/", tooltip: "Used in: SABAG" },
+              { label: "PostgreSQL", href: "https://www.postgresql.org/", tooltip: "Used in: Favur & SABAG" },
             ]}
           />
         </div>
@@ -79,9 +79,9 @@ export default function SkillsSection() {
           <h3 className="text-sm font-semibold uppercase tracking-wide text-foreground/50">UI libraries</h3>
           <TagList
             tags={[
-              { label: "MaterialUI", href: "https://mui.com/", tooltip: "UFirstGroup (Favur) · Proficient · 2 yrs" },
-              { label: "TailwindCSS", href: "https://tailwindcss.com/", tooltip: "Personal projects · Proficient" },
-              { label: "Bootstrap", href: "https://getbootstrap.com/", tooltip: "Halo.Rent · Proficient · 3+ yrs" },
+              { label: "MaterialUI", href: "https://mui.com/", tooltip: "Used in: Favur" },
+              { label: "TailwindCSS", href: "https://tailwindcss.com/", tooltip: "Used for this website" },
+              { label: "Bootstrap", href: "https://getbootstrap.com/", tooltip: "Used in: Halo.Rent" },
             ]}
           />
         </div>
@@ -90,14 +90,14 @@ export default function SkillsSection() {
           <h3 className="text-sm font-semibold uppercase tracking-wide text-foreground/50">Testing & tooling</h3>
           <TagList
             tags={[
-              { label: "Jest", href: "https://jestjs.io/", tooltip: "Favur & SABAG · Proficient · 3+ yrs" },
-              { label: "React Testing Library", href: "https://testing-library.com/docs/react-testing-library/intro/", tooltip: "Favur & SABAG · Proficient · 3+ yrs" },
-              { label: "Cypress", href: "https://www.cypress.io/", tooltip: "Favur, SABAG & Halo.Rent · Intermediate · 3+ yrs" },
-              { label: "Storybook", href: "https://storybook.js.org/", tooltip: "UFirstGroup & Halo.Rent · Proficient · 5+ yrs" },
-              { label: "Figma", href: "https://www.figma.com/", tooltip: "All professional roles · Proficient · 5+ yrs" },
-              { label: "DataDog", href: "https://www.datadoghq.com/", tooltip: "UFirstGroup · Proficient · 2 yrs" },
-              { label: "GitLab CI/CD", href: "https://docs.gitlab.com/ee/ci/", tooltip: "All professional roles · Proficient · 5+ yrs" },
-              { label: "Git", href: "https://git-scm.com/", tooltip: "All roles & projects · Expert · 5+ yrs" },
+              { label: "Jest", href: "https://jestjs.io/", tooltip: "Used in: Favur & SABAG" },
+              { label: "React Testing Library", href: "https://testing-library.com/docs/react-testing-library/intro/", tooltip: "Used in: Favur & SABAG" },
+              { label: "Cypress", href: "https://www.cypress.io/", tooltip: "Used in: Favur, SABAG & Halo.Rent" },
+              { label: "Storybook", href: "https://storybook.js.org/", tooltip: "Used in: Favur & Halo.Rent" },
+              { label: "Figma", href: "https://www.figma.com/", tooltip: "Used in: Favur, SABAG & Halo.Rent" },
+              { label: "DataDog", href: "https://www.datadoghq.com/", tooltip: "Used in: Favur & SABAG" },
+              { label: "GitLab CI/CD", href: "https://docs.gitlab.com/ee/ci/", tooltip: "Used in: Favur, SABAG & Halo.Rent" },
+              { label: "Git", href: "https://git-scm.com/", tooltip: "Used in: All projects" },
             ]}
           />
         </div>
