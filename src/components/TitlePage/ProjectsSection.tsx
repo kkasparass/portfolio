@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import TagList from "../TagList/TagList";
 
 export default function ProjectsSection() {
@@ -18,14 +19,11 @@ export default function ProjectsSection() {
             height={48}
           />
           <div className="flex flex-col">
-            <a
-              target="_blank"
-              href="https://github.com/kkasparass/day_planner"
-            >
+            <Link href="/projects/day-planner">
               <h3 className="text-2xl font-semibold underline hover:no-underline">
                 Day Planner
               </h3>
-            </a>
+            </Link>
             <span className="text-xs font-medium bg-sky-100 text-sky-700 dark:bg-sky-900/40 dark:text-sky-300 px-2 py-0.5 rounded-full w-fit">
               Personal project — live
             </span>

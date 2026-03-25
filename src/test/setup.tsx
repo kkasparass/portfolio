@@ -21,9 +21,17 @@ vi.mock("next/image", () => ({
 
 // Mock react-tooltip — it uses DOM APIs not available in jsdom
 vi.mock("react-tooltip", () => ({
-  Tooltip: ({ id, children }: { id: string; children: React.ReactNode }) => (
+  Tooltip: ({
+    id,
+    content,
+    children,
+  }: {
+    id: string;
+    content?: string;
+    children?: React.ReactNode;
+  }) => (
     <div role="tooltip" id={id}>
-      {children}
+      {content ?? children}
     </div>
   ),
 }));

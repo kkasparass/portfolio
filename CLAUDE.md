@@ -10,9 +10,15 @@ npm run build    # Production build
 npm run lint     # Run ESLint
 ```
 
+## Planning policy
+
+When a feature plan is approved, save a copy to `.claude/feature-plans/<feature-name>.md` in this repo **before** starting implementation.
+
+---
+
 ## Architecture
 
-Single-page Next.js portfolio site using the App Router. The main page (`src/app/page.tsx`) is composed of four sections in order:
+Next.js portfolio site using the App Router. The main page (`src/app/page.tsx`) is composed of four sections in order:
 
 1. **IntroductionSection** — bio, contact info, social links
 2. **SkillsSection** — technical skills with icon row + categorised tag pills
@@ -22,8 +28,11 @@ Single-page Next.js portfolio site using the App Router. The main page (`src/app
 ### Key paths
 
 - `src/app/` — App Router root: `layout.tsx`, `page.tsx`, `globals.css`
+- `src/app/projects/` — Project detail pages (e.g. `day-planner/page.tsx`)
 - `src/components/` — Reusable components grouped by feature (`TitlePage/`, `AccordionItems/`, `SocialsRow/`, `TagList/`, `TooltipIcon/`)
+- `src/components/PageLayout.tsx` — Shared page wrapper (gradient + `max-w-3xl` centered layout). Use this for every page.
 - `public/` — Static assets: SVG tech logos, project images, `cv.pdf`
+- `public/projects/` — Per-project assets (images, GIFs) organised by project slug
 
 ### Styling
 
