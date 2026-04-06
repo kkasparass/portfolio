@@ -12,6 +12,39 @@ export default function ProjectsSection() {
 
       <div className="flex flex-col gap-3">
         <div className="flex gap-2 items-center">
+          <div className="flex flex-col">
+            <Link href="/projects/tavern-log">
+              <h3 className="text-2xl font-semibold underline hover:no-underline">
+                Tavern Log
+              </h3>
+            </Link>
+            <span className="text-xs font-medium bg-sky-100 text-sky-700 dark:bg-sky-900/40 dark:text-sky-300 px-2 py-0.5 rounded-full w-fit">
+              Personal project — live
+            </span>
+          </div>
+        </div>
+        <p>
+          A full-stack character archive for TTRPG players. Users register,
+          upload characters, and each gets a dedicated profile with short
+          stories, voice lines, an art gallery, and a timeline — all with
+          per-character theming. Built from conception to deployed MVP in under a
+          week.
+        </p>
+        <TagList
+          tags={[
+            "Next.js",
+            "Fastify",
+            "TypeScript",
+            "Prisma",
+            "PostgreSQL",
+            "AWS S3",
+            "TailwindCSS",
+          ]}
+        />
+      </div>
+
+      <div className="flex flex-col gap-3">
+        <div className="flex gap-2 items-center">
           <Image
             src="/adaptive-icon-cropped.png"
             alt="Day Planner app icon"
