@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, FileUser, Github } from "lucide-react";
-import PageLayout from "../../../components/PageLayout";
+import PageLayout from "../../../components/PageLayout/PageLayout";
 import TagList from "../../../components/TagList/TagList";
 
 export const metadata: Metadata = {
@@ -96,8 +96,9 @@ export default function DayPlannerPage() {
           <h3 className="text-xl font-semibold">Daily todos</h3>
           <p>
             At its core, Day Planner is a daily todo list. Each day is its own
-            container — add tasks, drag to reorder, mark them complete. Completed
-            tasks collapse to the bottom so your focus stays on what&apos;s left.
+            container — add tasks, drag to reorder, mark them complete.
+            Completed tasks collapse to the bottom so your focus stays on
+            what&apos;s left.
           </p>
         </div>
 
@@ -114,8 +115,8 @@ export default function DayPlannerPage() {
           <p>
             Each plan item can be edited individually — you can rename it, set
             an effort value, adjust the repeat frequency, or move it within the
-            tree. Plan items can be added directly to today&apos;s todos from the
-            planner view.
+            tree. Plan items can be added directly to today&apos;s todos from
+            the planner view.
           </p>
           <p>
             Todos added from plan items get a completion button that marks the
@@ -129,10 +130,10 @@ export default function DayPlannerPage() {
           <h3 className="text-xl font-semibold">Repeat frequency</h3>
           <p>
             For recurring tasks — change bedsheets, practice guitar, go for a
-            run — you can set a repeat frequency in days. When you&apos;re adding
-            that item to a day, the button colour tells you where you stand: green
-            means you&apos;ve done it recently, orange means it&apos;s due soon,
-            red means the window has passed.
+            run — you can set a repeat frequency in days. When you&apos;re
+            adding that item to a day, the button colour tells you where you
+            stand: green means you&apos;ve done it recently, orange means
+            it&apos;s due soon, red means the window has passed.
           </p>
         </div>
 
@@ -156,15 +157,16 @@ export default function DayPlannerPage() {
           <h3 className="text-xl font-semibold">Energy & effort system</h3>
           <p>
             Each day has an energy cap (default: 24 units — roughly one unit per
-            half hour). Every task, plan item, and routine item carries an effort
-            value. A progress bar at the top of the day fills up as you add tasks,
-            turning yellow then red as you approach or exceed the cap.
+            half hour). Every task, plan item, and routine item carries an
+            effort value. A progress bar at the top of the day fills up as you
+            add tasks, turning yellow then red as you approach or exceed the
+            cap.
           </p>
           <p>
-            It&apos;s not a hard constraint — you can go over. It&apos;s more of a
-            gut-check before you commit to a day that&apos;s already too full. When
-            adding a plan item, if it would push you over the cap, the button turns
-            red to flag it.
+            It&apos;s not a hard constraint — you can go over. It&apos;s more of
+            a gut-check before you commit to a day that&apos;s already too full.
+            When adding a plan item, if it would push you over the cap, the
+            button turns red to flag it.
           </p>
         </div>
 
@@ -187,37 +189,53 @@ export default function DayPlannerPage() {
         <h2 className="text-2xl font-semibold">Technical details</h2>
 
         <div className="flex flex-col gap-2">
-          <h3 className="text-sm font-semibold uppercase tracking-wide text-foreground/50">Stack</h3>
+          <h3 className="text-sm font-semibold uppercase tracking-wide text-foreground/50">
+            Stack
+          </h3>
           <TagList
             tags={[
               { label: "React Native", href: "https://reactnative.dev/" },
               { label: "Expo", href: "https://expo.dev/" },
               { label: "TypeScript", href: "https://www.typescriptlang.org/" },
-              { label: "Expo SQLite", href: "https://docs.expo.dev/versions/latest/sdk/sqlite/" },
+              {
+                label: "Expo SQLite",
+                href: "https://docs.expo.dev/versions/latest/sdk/sqlite/",
+              },
               { label: "Redux Toolkit", href: "https://redux-toolkit.js.org/" },
-              { label: "EAS Build", href: "https://docs.expo.dev/build/introduction/" },
-              { label: "React Navigation", href: "https://reactnavigation.org/" },
-              { label: "React Native Paper", href: "https://reactnativepaper.com/" },
+              {
+                label: "EAS Build",
+                href: "https://docs.expo.dev/build/introduction/",
+              },
+              {
+                label: "React Navigation",
+                href: "https://reactnavigation.org/",
+              },
+              {
+                label: "React Native Paper",
+                href: "https://reactnativepaper.com/",
+              },
             ]}
           />
         </div>
 
         <div className="flex flex-col gap-3 mt-2">
-          <h3 className="text-sm font-semibold uppercase tracking-wide text-foreground/50">Architecture</h3>
+          <h3 className="text-sm font-semibold uppercase tracking-wide text-foreground/50">
+            Architecture
+          </h3>
           <p>
-            <strong>SQLite as the single source of truth.</strong> All persistent
-            state lives in the database — there is no Redux store of app data.
-            Redux is used only as a reload-signal layer: two slices hold boolean
-            flags that component hooks watch to know when to re-query SQLite.
-            This keeps the data layer simple and the UI always in sync with what&apos;s
-            actually on disk.
+            <strong>SQLite as the single source of truth.</strong> All
+            persistent state lives in the database — there is no Redux store of
+            app data. Redux is used only as a reload-signal layer: two slices
+            hold boolean flags that component hooks watch to know when to
+            re-query SQLite. This keeps the data layer simple and the UI always
+            in sync with what&apos;s actually on disk.
           </p>
           <p>
-            <strong>6-table schema with self-referential hierarchy.</strong> The
-            {" "}<code>planning_categories</code> table references itself via a{" "}
+            <strong>6-table schema with self-referential hierarchy.</strong> The{" "}
+            <code>planning_categories</code> table references itself via a{" "}
             <code>parent</code> FK, enabling unlimited nesting depth without
-            schema changes. A <code>parentLabel</code> column is denormalised onto
-            each row to avoid recursive joins at render time. A custom{" "}
+            schema changes. A <code>parentLabel</code> column is denormalised
+            onto each row to avoid recursive joins at render time. A custom{" "}
             <code>INSERT</code> trigger on <code>daily_todos</code> auto-assigns
             sort order, removing the need to manage ordering on insert.
           </p>
@@ -230,22 +248,24 @@ export default function DayPlannerPage() {
         </div>
 
         <div className="flex flex-col gap-3 mt-2">
-          <h3 className="text-sm font-semibold uppercase tracking-wide text-foreground/50">Notable challenges</h3>
+          <h3 className="text-sm font-semibold uppercase tracking-wide text-foreground/50">
+            Notable challenges
+          </h3>
           <p>
-            <strong>Drag-to-reorder sync with SQLite.</strong> React Native&apos;s
-            drag libraries update UI state optimistically, but writing the new
-            order back to SQLite without triggering redundant re-renders required
-            a bulk SQL reorder on drop, coordinated with Redux reload flags to
-            re-fetch cleanly after the write settled.
+            <strong>Drag-to-reorder sync with SQLite.</strong> React
+            Native&apos;s drag libraries update UI state optimistically, but
+            writing the new order back to SQLite without triggering redundant
+            re-renders required a bulk SQL reorder on drop, coordinated with
+            Redux reload flags to re-fetch cleanly after the write settled.
           </p>
           <p>
             <strong>Recursive subcategory rendering.</strong> Rendering
-            arbitrarily deep nested trees efficiently in React Native is tricky —
-            recursive queries are slow and recursive components can blow the call
-            stack. The solution was to denormalise <code>parentLabel</code>{" "}
+            arbitrarily deep nested trees efficiently in React Native is tricky
+            — recursive queries are slow and recursive components can blow the
+            call stack. The solution was to denormalise <code>parentLabel</code>{" "}
             directly onto each row, flattening the fetch to a single query, and
-            render the tree with a collapsible accordion that only mounts visible
-            nodes.
+            render the tree with a collapsible accordion that only mounts
+            visible nodes.
           </p>
         </div>
       </section>

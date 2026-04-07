@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, ExternalLink, Github } from "lucide-react";
-import PageLayout from "../../../components/PageLayout";
+import PageLayout from "../../../components/PageLayout/PageLayout";
 import TagList from "../../../components/TagList/TagList";
 
 export const metadata: Metadata = {
@@ -63,15 +63,15 @@ export default function TavernLogPage() {
           backstory, voice, and visual identity. I wanted a place to bring them
           to life beyond character sheets and scattered Google Docs. I wanted
           something with a more personal touch — a dedicated profile for each
-          character that could really showcase their personality through stories,
-          voice lines, artwork, and a timeline of key moments.
+          character that could really showcase their personality through
+          stories, voice lines, artwork, and a timeline of key moments.
         </p>
         <p>
           It also doubled as a deliberate full-stack learning project. I had
           identified specific skill gaps I wanted to fill — Fastify, Prisma,
-          PostgreSQL from scratch, JWT auth, AWS S3, Docker, and GitHub Actions —
-          and designed the architecture to cover all of them in a single project
-          I&apos;d actually want to use.
+          PostgreSQL from scratch, JWT auth, AWS S3, Docker, and GitHub Actions
+          — and designed the architecture to cover all of them in a single
+          project I&apos;d actually want to use.
         </p>
       </section>
 
@@ -83,9 +83,9 @@ export default function TavernLogPage() {
           <h3 className="text-xl font-semibold">Character profiles</h3>
           <p>
             Each character gets a dedicated profile page with a bio, personality
-            section, status badge, and tags. The landing page surfaces all public
-            characters on the platform with client-side filtering by name, game
-            system, and tag.
+            section, status badge, and tags. The landing page surfaces all
+            public characters on the platform with client-side filtering by
+            name, game system, and tag.
           </p>
         </div>
 
@@ -130,12 +130,12 @@ export default function TavernLogPage() {
         <div className="flex flex-col gap-3">
           <h3 className="text-xl font-semibold">Per-character theming</h3>
           <p>
-            Every character can have its own visual identity. The admin selects a
-            colour theme that controls the background, text, and accent colours
-            across the entire profile — plus a background pattern and page
-            transition animation. Theming is powered by CSS custom properties
-            wired into Tailwind&apos;s colour tokens, so the classes stay static
-            while the values change per character at runtime.
+            Every character can have its own visual identity. The admin selects
+            a colour theme that controls the background, text, and accent
+            colours across the entire profile — plus a background pattern and
+            page transition animation. Theming is powered by CSS custom
+            properties wired into Tailwind&apos;s colour tokens, so the classes
+            stay static while the values change per character at runtime.
           </p>
         </div>
 
@@ -145,8 +145,8 @@ export default function TavernLogPage() {
             Anyone can register an account and create characters. Each user gets
             a full admin interface with CRUD for all content types — stories,
             voice lines, artwork, and timeline events — scoped to their own
-            characters. Authentication uses JWT tokens stored in httpOnly cookies
-            with CSRF protection.
+            characters. Authentication uses JWT tokens stored in httpOnly
+            cookies with CSRF protection.
           </p>
         </div>
       </section>
@@ -169,7 +169,10 @@ export default function TavernLogPage() {
                 label: "TanStack Query",
                 href: "https://tanstack.com/query/latest",
               },
-              { label: "Framer Motion", href: "https://www.framer.com/motion/" },
+              {
+                label: "Framer Motion",
+                href: "https://www.framer.com/motion/",
+              },
               { label: "Tiptap", href: "https://tiptap.dev/" },
               { label: "Fastify", href: "https://fastify.dev/" },
               { label: "Prisma", href: "https://www.prisma.io/" },
@@ -177,7 +180,10 @@ export default function TavernLogPage() {
               { label: "AWS S3", href: "https://aws.amazon.com/s3/" },
               { label: "Vitest", href: "https://vitest.dev/" },
               { label: "Docker", href: "https://www.docker.com/" },
-              { label: "GitHub Actions", href: "https://github.com/features/actions" },
+              {
+                label: "GitHub Actions",
+                href: "https://github.com/features/actions",
+              },
             ]}
           />
         </div>
@@ -196,42 +202,36 @@ export default function TavernLogPage() {
             place.
           </p>
           <p>
-            <strong>
-              RSC prefetch + TanStack Query HydrationBoundary.
-            </strong>{" "}
+            <strong>RSC prefetch + TanStack Query HydrationBoundary.</strong>{" "}
             Public pages fetch data in a React Server Component, dehydrate the
             TanStack Query cache, and pass it to client components via{" "}
             <code>HydrationBoundary</code>. Client components call{" "}
             <code>useQuery()</code> with the same key and find the data already
-            present — no loading flash, no redundant network request. Admin pages
-            use <code>useMutation()</code> with{" "}
+            present — no loading flash, no redundant network request. Admin
+            pages use <code>useMutation()</code> with{" "}
             <code>invalidateQueries()</code> for automatic cache sync after CRUD
             operations.
           </p>
           <p>
-            <strong>
-              Auth from scratch — no NextAuth.
-            </strong>{" "}
-            Authentication is implemented entirely in Fastify: bcrypt password
-            hashing, JWT signing via <code>@fastify/jwt</code>, httpOnly cookie
-            storage (immune to XSS token theft), and CSRF protection via{" "}
+            <strong>Auth from scratch — no NextAuth.</strong> Authentication is
+            implemented entirely in Fastify: bcrypt password hashing, JWT
+            signing via <code>@fastify/jwt</code>, httpOnly cookie storage
+            (immune to XSS token theft), and CSRF protection via{" "}
             <code>@fastify/csrf-protection</code>. Next.js middleware reads the
             cookie to gate <code>/admin/*</code> routes.
           </p>
           <p>
             <strong>Presigned S3 uploads.</strong> File uploads go directly from
-            the browser to S3. The client calls an authenticated Fastify endpoint
-            to get a short-lived presigned PUT URL, then uploads the file
-            directly — neither server touches the binary payload.
+            the browser to S3. The client calls an authenticated Fastify
+            endpoint to get a short-lived presigned PUT URL, then uploads the
+            file directly — neither server touches the binary payload.
           </p>
           <p>
-            <strong>
-              Per-character theming via CSS custom properties.
-            </strong>{" "}
+            <strong>Per-character theming via CSS custom properties.</strong>{" "}
             Tailwind generates static CSS at build time, so dynamically
-            constructed class names from database values get purged. The solution:
-            Tailwind colour tokens reference CSS variables, and the character
-            layout injects actual hex values at runtime via an inline{" "}
+            constructed class names from database values get purged. The
+            solution: Tailwind colour tokens reference CSS variables, and the
+            character layout injects actual hex values at runtime via an inline{" "}
             <code>style</code> prop. Static classes, dynamic values.
           </p>
         </div>
@@ -241,10 +241,12 @@ export default function TavernLogPage() {
             Notable challenges
           </h3>
           <p>
-            <strong>Learning three new tools simultaneously under real constraints.</strong>{" "}
+            <strong>
+              Learning three new tools simultaneously under real constraints.
+            </strong>{" "}
             Fastify, Prisma, and AWS S3 were all new. Rather than exploring them
-            in isolation, the architecture required integrating them together from
-            the start — Prisma behind a Fastify plugin system, S3 behind an
+            in isolation, the architecture required integrating them together
+            from the start — Prisma behind a Fastify plugin system, S3 behind an
             authenticated presign endpoint with CORS-scoped IAM permissions.
           </p>
           <p>

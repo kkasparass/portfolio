@@ -12,6 +12,12 @@ export default function ProjectsSection() {
 
       <div className="flex flex-col gap-3">
         <div className="flex gap-2 items-center">
+          <Image
+            src="/tavern-log-icon.png"
+            alt="Tavern Log app icon"
+            width={48}
+            height={48}
+          />
           <div className="flex flex-col">
             <Link href="/projects/tavern-log">
               <h3 className="text-2xl font-semibold underline hover:no-underline">
@@ -27,8 +33,8 @@ export default function ProjectsSection() {
           A full-stack character archive for TTRPG players. Users register,
           upload characters, and each gets a dedicated profile with short
           stories, voice lines, an art gallery, and a timeline — all with
-          per-character theming. Built from conception to deployed MVP in under a
-          week.
+          per-character theming. Built from conception to deployed MVP in under
+          a week.
         </p>
         <TagList
           tags={[
@@ -65,9 +71,9 @@ export default function ProjectsSection() {
         <p>
           A fully offline mobile productivity app I designed and shipped solo.
           Built around a daily energy budget system — tasks have effort values,
-          and a per-day cap keeps you from overloading. Includes drag-to-reorder,
-          hierarchical plan categories with unlimited nesting, reusable routines,
-          and SQLite backup/restore.
+          and a per-day cap keeps you from overloading. Includes
+          drag-to-reorder, hierarchical plan categories with unlimited nesting,
+          reusable routines, and SQLite backup/restore.
         </p>
         <TagList
           tags={[

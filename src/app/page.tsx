@@ -1,4 +1,4 @@
-import PageLayout from "../components/PageLayout";
+import PageLayout from "../components/PageLayout/PageLayout";
 import CareerSection from "../components/TitlePage/CareerSection";
 import IntroductionSection from "../components/TitlePage/IntroductionSection";
 import ProjectsSection from "../components/TitlePage/ProjectsSection";
